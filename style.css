@@ -44,19 +44,10 @@ body{
     }
 }
 
-li::after{
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: var(--color-button);
-    left: 50%;
-}
-
 
 .cover{
     height: 750px;
-    background-image: url(./img/emerson-vieira-cpkPJ-U9eUM-unsplash.jpg);
+    background-image: url(./assets/img/cover.jpg);
     background-repeat: no-repeat;
     background-position: center ;
     background-size: cover;
