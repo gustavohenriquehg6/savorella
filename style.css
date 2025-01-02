@@ -17,7 +17,6 @@
     --font-text:  "Roboto", serif;
     --font-text2: "Satisfy", serif;
 
-
 }
 
 body{
@@ -219,6 +218,69 @@ aside{
     border-bottom: solid 1px var(--color-button);
     
 }
+
+footer{
+    display: grid;
+    width: 1000px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;   
+}
+
+footer  h2{
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: var(--font-text2);
+}
+
+.list_footer li{
+    padding: 10px;
+    text-align: center;
+    font-family: var(--font-text);
+    cursor: pointer;
+
+}
+
+.list_footer li:hover{
+    color: var(--color-button);
+    transition: 0.6s linear;
+}
+
+.houer{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-text);
+    margin-top: 50px;
+    margin-left: 35px;
+    
+}
+
+.openig_footer p  {
+    padding: 10px;
+}
+
+.houer span{
+    padding: 10px;
+}
+
+.text_footer1::after{
+    position: absolute;
+    content: "";
+    width: 180px;
+    height: 15px;
+    border-bottom: 1px solid #fff;
+
+}
+
+.text_footer2::after{
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 15px;
+    border-bottom: 1px solid #fff;
+
+}
+
 
 
 
