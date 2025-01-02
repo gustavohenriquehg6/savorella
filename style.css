@@ -37,8 +37,10 @@ body{
     font-family: var(--font-text);
     letter-spacing: 2px;
 
-    & li{
+    & li:hover{
         cursor: pointer;
+        color: var(--color-button);
+        transition: 0.6s linear;
 
     }
 }
@@ -215,8 +217,7 @@ aside{
     position: absolute;
     width: 600px;
     height: 15px;
-    border-bottom: solid 1px var(--color-button);
-    
+    border-bottom: solid 1px var(--color-button);  
 }
 
 footer{
@@ -281,6 +282,64 @@ footer  h2{
 
 }
 
+.footer-credits{
+    height: 30%;
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    font-weight: 100;
+    background-color: #0C1213;
+}
 
 
+/*Resposividade*/
+@media (max-width:1200px){
+    .nav-bar ul li{
+        display: none;
+    }
+    .cover_content{
+        text-align: center;
+        padding: 10px;
+    }
+    .title_about{
+        text-align: center;
+    }
+    .card{
+        margin: auto;
+    }
+    .card img {
+        width: 350px;
+    }
+    .about_container{
+        flex-direction: column;
+        margin: 0;
+        padding: 5px;
+    }
+    .text_card{
+        width: 350px;
+        height: 500px;
+        margin: auto;
 
+    }
+    aside{
+        flex-direction: column;
+    }
+
+    .imagem, .our-especial{
+        width: 350px;
+        margin: auto;
+    }
+
+    .glass::after{       
+        width: 60px; 
+    }
+
+    footer{
+        display: flex;
+        width: 350px;
+        flex-direction: column;   
+    }
+
+    
+   
+}
