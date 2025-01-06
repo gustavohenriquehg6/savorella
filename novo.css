@@ -21,9 +21,7 @@
 /*Definindo cor de fundo*/
 body{
     background-color: var(--bg-color);
-    color: var(--font-color);
-    overflow-x: hidden;
-    
+    color: var(--font-color);   
 }
 
 /*menu de navegação*/
@@ -109,7 +107,7 @@ header {
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     height: 100%;
-    gap: 10px;
+    gap: 10px;    
 }
 
 .cover_content h3{
@@ -210,8 +208,6 @@ aside{
     display: flex;
     background-color: var(--container-bg);
     margin: 100px 0px;
-    
-
 }
 
 .imagem, .our-especial{
@@ -226,21 +222,33 @@ aside{
 .menu-title{
     font-family: var(--font-text);
     font-size: 40px;
-    font-weight: 200;
+    font-weight: 270;
     margin: 20px;
 }
 
-.glass{
+.dish{
+    font-weight: 200;
+    letter-spacing: 1px;
     font-family: var(--font-text);
+    font-size: 18px;
+    
+
+}
+
+.price{
+    position: absolute;
+    right: 20px;
     font-size: 15px;
 }
 
-.glass::after{
+.price::before{
     content: '';
     padding: 1.4px;
     position: absolute;
-    width: 300px;
+    width: 250px;
+    transform: translate(-100%);
     height: 15px;
+    padding-left: 60px;
     border-bottom: solid 1px var(--color-button);  
 }
 /*rodapé*/
@@ -271,43 +279,28 @@ footer  h2{
     transition: 0.6s linear;
 }
 
-.houer{
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-text);
-    margin-top: 50px;
-    margin-left: 35px;
-    
-}
-
 .openig_footer p  {
     padding: 10px;
 }
 
-.houer span{
-    padding: 10px;
+.houer{
+    position: absolute;
+    right: 400px;
 }
 
-.text_footer1::after{
+.houer::before{
+    content: '';
+    padding: 1.4px;
     position: absolute;
-    content: "";
-    width: 180px;
+    width: 10px;
+    transform: translate(-100%);
     height: 15px;
-    border-bottom: 1px solid #fff;
-
-}
-
-.text_footer2::after{
-    position: absolute;
-    content: "";
-    width: 150px;
-    height: 15px;
-    border-bottom: 1px solid #fff;
-
+    padding-left: 60px;
+    border-bottom: solid 1px var(--color-button); 
 }
 
 .footer-credits{
-    height: 30%;
+    height: 2%;
     text-align: center;
     margin-top: 40px;
     padding: 30px;
@@ -315,12 +308,18 @@ footer  h2{
     background-color: #0C1213;
 }
 
+/*scroll efeito*/
+
+.cover_content, .title,.scroll-efect1,.scroll-efect2,.scroll-efect3,.imagem,.our-especial{
+    visibility: hidden;
+}
 /*Resposividade*/
 @media (max-width:1200px){
     /*Configuração do menu responsivo*/
+
     .menu-icon {
         visibility: visible;
-        z-index: 1;
+        z-index: 1000;
     }
      
     .menu{
@@ -334,12 +333,17 @@ footer  h2{
         top:  0;
         right: -300px;
         transition: 0.6s linear;
+        z-index: 999;
         visibility: hidden;       
     }
     
     .menu.abrir_menu{
         right:0;
         visibility: visible;
+    }
+
+    .menu.abrir_menu li {
+        z-index: 1001;
     }
     
     .menu.abrir_menu li:hover {
@@ -379,9 +383,19 @@ footer  h2{
         width: 350px;
         margin: auto;
     }
+    
+    .price::before{       
+        width: 9px; 
+    }
 
-    .glass::after{       
-        width: 60px; 
+    .houer{
+        position: absolute;
+        right: 1px;
+        padding-right: 10px;
+    }
+
+    .houer::before{
+        width: 6px;
     }
 
     footer{
